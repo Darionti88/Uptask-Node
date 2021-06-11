@@ -30,7 +30,7 @@ exports.enviar = async (opciones)=>{
   const text = convert(html)
 
   let mailOptions={
-    from: 'UpTask<no-reply@uptask.com>',
+    from: 'UpTask<hornero.audiovisuales@gmail.com>',
     to: opciones.usuario.email,
     subject: opciones.subject,
     text,
