@@ -6,17 +6,17 @@ const util = require('util')
 const smtpTransport = require('nodemailer-smtp-transport');
 
 let transporter = nodemailer.createTransport(smtpTransport({
-    service:'gmail',
-    host: process.env.GMAIL_HOST,
-    port: 465,
-    secure: true,
+    
+    host: process.env.MAILTRAP_HOST,
+    port: 2525,
     auth: {
-      user: process.env.GMAIL_USER,
-      pass: process.env.GMAIL_PASS
-    },
-    tls:{
-      rejectUnauthorized: false
-    }
+      user: process.env.MAILTRAP_USER,
+      pass: process.env.MAILTRAP_PASS
+      }
+     //,
+    // tls:{
+    //   rejectUnauthorized: false
+    // }
   }));
 
 

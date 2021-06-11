@@ -27,24 +27,24 @@ exports.crearCuenta = async (req, res)=>{
         })
 
         //crear URL de confirmar
-        const confirmarUrl = `http://${req.headers.host}/confirmar/${email}`
+        // const confirmarUrl = `http://${req.headers.host}/confirmar/${email}`
 
-        //crear Objeto de usuario
-        const usuario ={
-            email
-        }
+        // //crear Objeto de usuario
+        // const usuario ={
+        //     email
+        // }
 
-        //enviar email
-        await enviarEmail.enviar({
-            usuario,
-            subject: 'Confirmar Cuenta de Uptask',
-            confirmarUrl,
-            archivo: 'confirmar-cuenta',
-        }).catch(err =>{
-            console.log(err, 'soy el error')
-        })
+        // //enviar email
+        // await enviarEmail.enviar({
+        //     usuario,
+        //     subject: 'Confirmar Cuenta de Uptask',
+        //     confirmarUrl,
+        //     archivo: 'confirmar-cuenta',
+        // }).catch(err =>{
+        //     console.log(err, 'soy el error')
+        // })
         //redirigir al usuario
-        req.flash('correcto', 'Enviamos un email, confirma tu cuenta');
+        req.flash('correcto', 'Cuenta creada. Ya podes ingresar');
         res.redirect('/iniciar-sesion');
 
     } catch(error){

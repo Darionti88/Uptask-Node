@@ -17,7 +17,7 @@ passport.use(
 
                 const usuario = await Usuarios.findOne({where:{
                     email,
-                    activo: 1
+                    // activo: 1 (para cuando active el mail de confirmación de cuenta por mail)
                 }})
             //usuario existe pero password no
             if(!usuario.verificarPassword(password)) {
