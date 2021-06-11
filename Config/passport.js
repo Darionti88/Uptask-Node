@@ -1,5 +1,4 @@
 const passport = require('passport')
-const { ids } = require('webpack')
 const LocalStrategy = require('passport-local').Strategy
 
 const Usuarios = require('../Models/Usuarios')

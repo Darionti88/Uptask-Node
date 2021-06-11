@@ -3,7 +3,7 @@ const express = require('express')
 const routes = require('./routes')
 const bodyParser = require('body-parser')
 const path = require('path')
-// const expressValidator  = require('express-validator')
+// const {expressValidator}  = require('express-validator')
 const flash = require('connect-flash')
 const session = require('express-session')
 const cookieParser = require('cookie-parser')
@@ -33,12 +33,14 @@ db.sync()
 //Creo app de express
 const app = express()
 
-//Agrego Express-Validator a toda la App
-// app.use(expressValidator())
+
 
 //Habilitar Body Parser
 app.use(bodyParser.urlencoded({extended: true}))
 
+
+// //Agrego Express-Validator a toda la App
+// app.use(expressValidator())
 
 //Donde carga archivos staticos(Css)
 app.use(express.static('public'))
