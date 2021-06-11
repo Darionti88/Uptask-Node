@@ -83,6 +83,6 @@ app.use((req,res, next)=>{
 app.use('/', routes())
 
 const host = process.env.HOST || '0.0.0.0'
-app.listen(process.env.PORT || 3000, ()=>{
+app.listen(process.env.PORT || 3000, host, ()=>{
     console.log("Express server working");
     })
