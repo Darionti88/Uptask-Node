@@ -16,9 +16,6 @@ const passport = require('./Config/passport')
 const helpers = require('./helpers')
 
 
-
-const port = process.env.PORT || 3001
-
 //Creo la conexion a la DB
 const db = require('./Config/db')
 
@@ -86,4 +83,6 @@ app.use((req,res, next)=>{
 app.use('/', routes())
 
 const host = process.env.HOST || '0.0.0.0'
-app.listen(port, host, console.log('El servidor funciona'))
+app.listen(process.env.PORT || 3000, host, ()=>{
+    console.log("Express server working");
+    })
