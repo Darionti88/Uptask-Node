@@ -3,9 +3,10 @@ const pug = require('pug')
 const juice = require('juice')
 const {convert} = require('html-to-text')
 const util = require('util')
-const emailConfig = require('../Config/email');
+const smtpTransport = require('nodemailer-smtp-transport');
 
-let transporter = nodemailer.createTransport({
+let transporter = nodemailer.createTransport(smtpTransport({
+    service:'gmail',
     host: process.env.GMAIL_HOST,
     port: 465,
     secure: true,
@@ -13,10 +14,10 @@ let transporter = nodemailer.createTransport({
       user: process.env.GMAIL_USER,
       pass: process.env.GMAIL_PASS
     },
-    // tls:{
-    //   rejectUnauthorized: false
-    // }
-  });
+    tls:{
+      rejectUnauthorized: false
+    }
+  }));
 
 
   //generar HTML
