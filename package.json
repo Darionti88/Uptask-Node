@@ -4,9 +4,10 @@
   "description": "proyecto-uptask-node",
   "main": "index.js",
   "scripts": {
+
+    "start": "node /index.js",
     "desarrollo":"concurrently \"npm run dev \" \"npm run watch \"",
     "dev": "nodemon ./index.js",
-    "start": "node index.js",
     "watch": "webpack -w --mode development"
   },
   "keywords": [
