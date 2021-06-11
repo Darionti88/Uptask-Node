@@ -4,7 +4,7 @@
   "description": "proyecto-uptask-node",
   "main": "index.js",
   "scripts": {
-    "desarrollo":"concurrently \"npm run dev \" \"npm run watch \"",
+    "desarrollo": "concurrently \"npm run dev \" \"npm run watch \"",
     "start": "node ./index.js",
     "dev": "nodemon ./index.js",
     "watch": "webpack -w --mode development"
@@ -29,6 +29,7 @@
     "juice": "^8.0.0",
     "mysql2": "^2.2.5",
     "nodemailer": "^6.6.1",
+    "nodemailer-smtp-transport": "^2.7.4",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "pug": "^3.0.2",
